@@ -4,7 +4,7 @@
 
 int opcion();
 
-int * pedir_numeros();
+void pedir_numeros(int * numeros);
 
 int sumar(int numero1, int numero2);
 
@@ -19,26 +19,29 @@ int main() {
 	puts("¡Bienvenido a la Calculador en C \"Pantheon\"!");
 
 	int seleccion = opcion();
-	int * numeros = pedir_numeros();
+	int numeros [2];
+	int resultado;
 
-	do {
-		switch(seleccion) {
-			case 1:
-				sumar(numeros[0], numeros[1]);
-				break;
-			case 2:
-				restar(numeros[0], numeros[1]);
-				break;
-			case 3:
-				multiplicar(numeros[0], numeros[1]);
-				break;
-			case 4:
-				dividir(numeros[0], numeros[1]);
-				break;
-			default:
-				printf("Opción no existente, intentelo de nuevo.");
-		}
-	} while(seleccion >= 1 && seleccion <= 5);
+	pedir_numeros(&numeros[0]);
+
+	switch(seleccion) {
+		case 1:
+			resultado = sumar(numeros[0], numeros[1]);
+			break;
+		case 2:
+			resultado = restar(numeros[0], numeros[1]);
+			break;
+		case 3:
+			resultado = multiplicar(numeros[0], numeros[1]);
+			break;
+		case 4:
+			resultado = dividir(numeros[0], numeros[1]);
+			break;
+		default:
+			printf("Opción no existente, intentelo de nuevo.");
+	}
+	
+	printf("El resultado de la operación que has escojido es %d\n", resultado);
 
 	return EXIT_SUCCESS;
 }
@@ -57,16 +60,12 @@ int opcion() {
 	return opcion;
 }
 
-int * pedir_numeros() {
-	int numeros[2];
-
+void pedir_numeros(int * numeros) {
 	printf("Introduce el primer número: ");
 	scanf("%d", &numeros[0]);
 
 	printf("Introduce el segundo número: ");
 	scanf("%d", &numeros[1]);
-
-	return &numeros[0];
 }
 
 int sumar(int numero1, int numero2) {
