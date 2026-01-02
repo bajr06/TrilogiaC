@@ -1,5 +1,5 @@
 namespace C {
-    public class Ventana {
+    public class Calculadora {
         private void Main() {
             console.write("Hello World");
             Calculadora calc = new Calculadora();
