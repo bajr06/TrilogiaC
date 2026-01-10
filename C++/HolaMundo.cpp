@@ -1,9 +1,8 @@
 #include <iostream>
-#include <stdlib.h>
-
+#include <print>
 
 int main() {
-	std::cout << "¡Hola Mundo!\n";
+	std::println << "Hola";
 
 	return EXIT_SUCCESS;
 }
