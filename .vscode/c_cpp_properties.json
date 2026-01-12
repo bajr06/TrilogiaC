@@ -1,6 +1,7 @@
 {
     "configurations": [
         {
+<<<<<<< HEAD
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
@@ -15,6 +16,17 @@
             "cStandard": "c23",
             "cppStandard": "c++26",
             "intelliSenseMode": "windows-msvc-x64"
+=======
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++26",
+            "intelliSenseMode": "${default}"
+>>>>>>> 71c5097216473d4d8a32587e06f78f2cd0e62eff
         }
     ],
     "version": 4
