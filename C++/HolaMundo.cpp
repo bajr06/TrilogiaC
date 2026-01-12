@@ -1,9 +1,13 @@
 #include <iostream>
-#include <stdlib.h>
+#include <print>
+#include <ostream>
 
+using namespace std;
 
 int main() {
-	std::cout << "¡Hola Mundo!\n";
+	string nombre = "Bryan";
+
+	print("Hola {}", nombre);
 
 	return EXIT_SUCCESS;
 }
